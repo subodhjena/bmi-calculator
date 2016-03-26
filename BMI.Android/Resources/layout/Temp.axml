@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Widget.CardContent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Widget.CardContent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <ImageView
+                android:src="@mipmap/ic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView1" />
+            <TextView
+                android:text="Results"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/primaryText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primary" />
+        <TextView
+            android:text="30"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtBMIResult"
+            android:textSize="@dimen/bmi_result_font_size"
+            android:textColor="@color/primary"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

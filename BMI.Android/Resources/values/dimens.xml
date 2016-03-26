@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="fab_margin">8dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+    <dimen name="horizontal_linear_layout_padding">5dp</dimen>
+    <dimen name="bmi_result_font_size">100dp</dimen>
+</resources>

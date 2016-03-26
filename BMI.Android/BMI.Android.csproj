@@ -115,4 +115,10 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BMI.Core\BMI.Core.csproj">
+      <Project>{6C1108E8-DDD8-4516-9170-6D33A271FD95}</Project>
+      <Name>BMI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

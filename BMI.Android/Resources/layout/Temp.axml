@@ -41,5 +41,10 @@
             android:textSize="@dimen/bmi_result_font_size"
             android:textColor="@color/primary"
             android:gravity="center" />
+        <Button
+            android:text="Close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CloseButton" />
     </LinearLayout>
 </LinearLayout>

@@ -7,6 +7,9 @@ using Android.OS;
 
 using Android.Support.V7.App;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
+using V7AlertDialog = Android.Support.V7.App.AlertDialog;
+
+using BMI.Android.Fragments;
 
 namespace BMI.Android.Activities
 {
@@ -22,6 +25,9 @@ namespace BMI.Android.Activities
 
             SetSupportActionBar (toolbar);
             SupportActionBar.Title = "BMI Calculator";
+
+            Button showCalculation = FindViewById<Button>(Resource.Id.btnCalculate);
+            showCalculation.Click += delegate{ShowResultsDialog();};
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -47,6 +53,24 @@ namespace BMI.Android.Activities
         private void StartSettingsActity()
         {
             StartActivity(typeof(SettingsActivity));
+        }
+
+        private void ShowResultsDialog()
+        {
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            //Remove fragment else it will crash as it is already added to backstack
+            Fragment prev = FragmentManager.FindFragmentByTag("dialog");
+            if (prev != null) {
+                ft.Remove(prev);
+            }
+
+            ft.AddToBackStack(null);
+
+            // Create and show the dialog.
+            ResultDialogFragment newFragment = ResultDialogFragment.NewInstance(null);
+
+            //Add fragment
+            newFragment.Show(ft, "dialog");
         }
     }
 }

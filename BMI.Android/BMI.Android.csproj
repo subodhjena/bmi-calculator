@@ -63,6 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\SettingsActivity.cs" />
+    <Compile Include="Fragments\ResultDialogFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -93,12 +94,23 @@
     <AndroidResource Include="Resources\layout\Activity_Settings.axml" />
     <AndroidResource Include="Resources\layout\Activity_Main.axml" />
     <AndroidResource Include="Resources\menu\main_menu.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_information.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_information.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_information.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_information.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_information.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_results.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_results.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_results.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_results.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_results.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\values-v21\" />
     <Folder Include="Activities\" />
     <Folder Include="Resources\menu\" />
+    <Folder Include="Fragments\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>

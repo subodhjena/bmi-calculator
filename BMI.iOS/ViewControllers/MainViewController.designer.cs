@@ -13,88 +13,72 @@ namespace BMI.iOS
 	partial class MainViewController
 	{
 		[Outlet]
-		UIKit.UIImageView imgFemale { get; set; }
+		UIKit.UITextField AgeTextField { get; set; }
 
 		[Outlet]
-		UIKit.UIImageView imgMale { get; set; }
+		UIKit.UILabel BMIResultLabel { get; set; }
 
 		[Outlet]
-		UIKit.UILabel lblBMIValue { get; set; }
+		UIKit.UITextField FeetTextField { get; set; }
 
 		[Outlet]
-		UIKit.UITextField txtAge { get; set; }
+		UIKit.UIImageView FemaleImage { get; set; }
 
 		[Outlet]
-		UIKit.UITextField txtFeet { get; set; }
+		UIKit.UITextField InchesTextField { get; set; }
 
 		[Outlet]
-		UIKit.UITextField txtInches { get; set; }
+		UIKit.UIImageView MaleImage { get; set; }
 
 		[Outlet]
-		UIKit.UITextField txtName { get; set; }
+		UIKit.UITextField NameTextField { get; set; }
 
 		[Outlet]
-		UIKit.UITextField txtWeight { get; set; }
+		UIKit.UITextField WeightTextField { get; set; }
 
-		[Outlet]
-		UIKit.UIView viewCard1 { get; set; }
-
-		[Outlet]
-		UIKit.UIView viewCard2 { get; set; }
-
-		[Action ("TappedShowResults:")]
-		partial void TappedShowResults (Foundation.NSObject sender);
+		[Action ("TappedShowResult:")]
+		partial void TappedShowResult (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (imgFemale != null) {
-				imgFemale.Dispose ();
-				imgFemale = null;
+			if (MaleImage != null) {
+				MaleImage.Dispose ();
+				MaleImage = null;
 			}
 
-			if (imgMale != null) {
-				imgMale.Dispose ();
-				imgMale = null;
+			if (FemaleImage != null) {
+				FemaleImage.Dispose ();
+				FemaleImage = null;
 			}
 
-			if (lblBMIValue != null) {
-				lblBMIValue.Dispose ();
-				lblBMIValue = null;
+			if (NameTextField != null) {
+				NameTextField.Dispose ();
+				NameTextField = null;
 			}
 
-			if (txtAge != null) {
-				txtAge.Dispose ();
-				txtAge = null;
+			if (FeetTextField != null) {
+				FeetTextField.Dispose ();
+				FeetTextField = null;
 			}
 
-			if (txtFeet != null) {
-				txtFeet.Dispose ();
-				txtFeet = null;
+			if (InchesTextField != null) {
+				InchesTextField.Dispose ();
+				InchesTextField = null;
 			}
 
-			if (txtInches != null) {
-				txtInches.Dispose ();
-				txtInches = null;
+			if (AgeTextField != null) {
+				AgeTextField.Dispose ();
+				AgeTextField = null;
 			}
 
-			if (txtName != null) {
-				txtName.Dispose ();
-				txtName = null;
+			if (WeightTextField != null) {
+				WeightTextField.Dispose ();
+				WeightTextField = null;
 			}
 
-			if (txtWeight != null) {
-				txtWeight.Dispose ();
-				txtWeight = null;
-			}
-
-			if (viewCard1 != null) {
-				viewCard1.Dispose ();
-				viewCard1 = null;
-			}
-
-			if (viewCard2 != null) {
-				viewCard2.Dispose ();
-				viewCard2 = null;
+			if (BMIResultLabel != null) {
+				BMIResultLabel.Dispose ();
+				BMIResultLabel = null;
 			}
 		}
 	}

@@ -4,7 +4,7 @@ namespace BMI.Core.Services
 {
     public interface ICalculation
     {
-        int BMIValue(int feet, int inches, int age, int weight);
+        float BMIValue(int feet, int inches, int age, int weight);
     }
 }
 

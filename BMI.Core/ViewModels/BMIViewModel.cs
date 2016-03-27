@@ -21,8 +21,19 @@ namespace BMI.Core.ViewModels
             Recalcuate();
         }
 
-        int _bmiValue;
-        public int BMIValue
+        string _name;
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                RaisePropertyChanged(() => Name);
+            }
+        }
+
+        float _bmiValue;
+        public float BMIValue
         {
             get { return _bmiValue; }
             set

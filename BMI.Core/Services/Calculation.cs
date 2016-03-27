@@ -8,9 +8,10 @@ namespace BMI.Core.Services
         {
         }
 
-        public int BMIValue(int feet, int inches, int age, int weight)
+        public float BMIValue(int feet, int inches, int age, int weight)
         {
-            return age;
+            float height = (inches / 12) + feet;
+            return weight / height;
         }
     }
 }

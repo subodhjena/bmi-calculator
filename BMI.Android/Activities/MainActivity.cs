@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 using Android.App;
 using Android.Views;
@@ -17,12 +18,15 @@ namespace BMI.Android.Activities
     [Activity(Label = "BMICalculator", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
     public class MainActivity : AppCompatActivity
     {
+        EditText AgeTextField;
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Activity_Main);
 
             var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
+            AgeTextField = FindViewById<EditText>(Resource.Id.txtAge);
 
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "BMI Calculator";
@@ -73,7 +77,7 @@ namespace BMI.Android.Activities
 
             // Create and Show the Dialog
             ResultDialogFragment resultDialog = ResultDialogFragment.NewInstance(null);
-            resultDialog.BMIValue = 20.9f;
+            resultDialog.BMIValue = float.Parse(AgeTextField.Text, CultureInfo.InvariantCulture);
             resultDialog.Show(fragmentTrans, "BMIResultDialog");
         }
     }

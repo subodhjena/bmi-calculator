@@ -19,16 +19,19 @@ namespace BMI.Android.Activities
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate (savedInstanceState);
-            SetContentView (Resource.Layout.Activity_Main);
+            base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.Activity_Main);
 
-            var toolbar = FindViewById<V7Toolbar> (Resource.Id.toolbar);
+            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
 
-            SetSupportActionBar (toolbar);
+            SetSupportActionBar(toolbar);
             SupportActionBar.Title = "BMI Calculator";
 
             Button showCalculation = FindViewById<Button>(Resource.Id.btnCalculate);
-            showCalculation.Click += delegate{ShowResultsDialog();};
+            showCalculation.Click += delegate
+            {
+                ShowResultsDialog();
+            };
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -59,7 +62,9 @@ namespace BMI.Android.Activities
         private void ShowResultsDialog()
         {
             var fragmentTrans = SupportFragmentManager.BeginTransaction();
-            V4Fragment fragment = SupportFragmentManager.FindFragmentByTag("dialog");
+          
+            // Lets check if the dialog is already displaying
+            V4Fragment fragment = SupportFragmentManager.FindFragmentByTag("BMIResultDialog");
             if (fragment != null)
             {
                 fragmentTrans.Remove(fragment);
@@ -67,9 +72,9 @@ namespace BMI.Android.Activities
             fragmentTrans.AddToBackStack(null);
 
             // Create and Show the Dialog
-            ResultDialogFragment resultDialog =  ResultDialogFragment.NewInstance(null);
-            resultDialog.BMIValue = 40;
-            resultDialog.Show(fragmentTrans, "dialog");
+            ResultDialogFragment resultDialog = ResultDialogFragment.NewInstance(null);
+            resultDialog.BMIValue = 20;
+            resultDialog.Show(fragmentTrans, "BMIResultDialog");
         }
     }
 }

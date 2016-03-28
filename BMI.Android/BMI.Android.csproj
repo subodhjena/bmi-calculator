@@ -104,8 +104,8 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_results.png" />
     <AndroidResource Include="Resources\layout\Dialog_BMIResult.axml" />
     <AndroidResource Include="Resources\drawable\normal.png" />
-    <AndroidResource Include="Resources\drawable\overweight.png" />
     <AndroidResource Include="Resources\drawable\underweight.png" />
+    <AndroidResource Include="Resources\drawable\overweight.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

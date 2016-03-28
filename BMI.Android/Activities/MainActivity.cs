@@ -68,6 +68,7 @@ namespace BMI.Android.Activities
 
             // Create and Show the Dialog
             ResultDialogFragment resultDialog =  ResultDialogFragment.NewInstance(null);
+            resultDialog.BMIValue = 40;
             resultDialog.Show(fragmentTrans, "dialog");
         }
     }

@@ -8,14 +8,13 @@ using Android.OS;
 
 using Android.Support.V7.App;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
-using V7AlertDialog = Android.Support.V7.App.AlertDialog;
 using V4Fragment = Android.Support.V4.App.Fragment;
 
 using BMI.Android.Fragments;
 
 namespace BMI.Android.Activities
 {
-    [Activity(Label = "BMICalculator", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
+    [Activity(Label = "BMI Calculator", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
     public class MainActivity : AppCompatActivity
     {
         EditText AgeTextField;

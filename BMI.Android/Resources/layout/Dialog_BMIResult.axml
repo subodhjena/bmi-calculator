@@ -39,7 +39,7 @@
             android:layout_gravity="center"
             android:padding="5dp" />
         <TextView
-            android:text="66"
+            android:text="22"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

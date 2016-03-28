@@ -107,10 +107,21 @@
     <ImageAsset Include="Resources\Images.xcassets\girl.imageset\Contents.json" />
     <ImageAsset Include="Resources\Images.xcassets\boy.imageset\boy.png" />
     <ImageAsset Include="Resources\Images.xcassets\girl.imageset\girl.png" />
+    <ImageAsset Include="Resources\Images.xcassets\logo.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\logo.imageset\BMI_LOGO.png" />
+    <ImageAsset Include="Resources\Images.xcassets\settings.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\settings.imageset\ic_tune_white.png" />
+    <ImageAsset Include="Resources\Images.xcassets\settings.imageset\ic_tune_white_2x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\settings.imageset\ic_tune_white_3x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\information.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\information.imageset\information.png" />
+    <ImageAsset Include="Resources\Images.xcassets\results.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\results.imageset\results.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="Resources\Main.storyboard" />
+    <InterfaceDefinition Include="TableViewCell\SettingsTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -125,10 +136,27 @@
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup.cs" />
+    <Compile Include="ViewControllers\ResultPopupViewController.cs" />
+    <Compile Include="ViewControllers\ResultPopupViewController.designer.cs">
+      <DependentUpon>ResultPopupViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SettingsViewController.cs" />
+    <Compile Include="ViewControllers\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewSource\SettingsTableViewSource.cs" />
+    <Compile Include="TableViewDelegates\SettingsTableViewDelegate.cs" />
+    <Compile Include="TableViewCell\SettingsTableViewCell.cs" />
+    <Compile Include="TableViewCell\SettingsTableViewCell.designer.cs">
+      <DependentUpon>SettingsTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Folder Include="ViewControllers\" />
+    <Folder Include="TableViewDelegates\" />
+    <Folder Include="TableViewSource\" />
+    <Folder Include="TableViewCell\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BMI.Core\BMI.Core.csproj">

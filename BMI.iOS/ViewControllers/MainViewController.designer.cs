@@ -19,6 +19,12 @@ namespace BMI.iOS
 		UIKit.UILabel BMIResultLabel { get; set; }
 
 		[Outlet]
+		UIKit.UIView Card1View { get; set; }
+
+		[Outlet]
+		UIKit.UIView Card2View { get; set; }
+
+		[Outlet]
 		UIKit.UITextField FeetTextField { get; set; }
 
 		[Outlet]
@@ -36,24 +42,32 @@ namespace BMI.iOS
 		[Outlet]
 		UIKit.UITextField WeightTextField { get; set; }
 
+		[Action ("TappedOnSettings:")]
+		partial void TappedOnSettings (Foundation.NSObject sender);
+
 		[Action ("TappedShowResult:")]
 		partial void TappedShowResult (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (MaleImage != null) {
-				MaleImage.Dispose ();
-				MaleImage = null;
+			if (AgeTextField != null) {
+				AgeTextField.Dispose ();
+				AgeTextField = null;
 			}
 
-			if (FemaleImage != null) {
-				FemaleImage.Dispose ();
-				FemaleImage = null;
+			if (BMIResultLabel != null) {
+				BMIResultLabel.Dispose ();
+				BMIResultLabel = null;
 			}
 
-			if (NameTextField != null) {
-				NameTextField.Dispose ();
-				NameTextField = null;
+			if (Card1View != null) {
+				Card1View.Dispose ();
+				Card1View = null;
+			}
+
+			if (Card2View != null) {
+				Card2View.Dispose ();
+				Card2View = null;
 			}
 
 			if (FeetTextField != null) {
@@ -61,24 +75,29 @@ namespace BMI.iOS
 				FeetTextField = null;
 			}
 
+			if (FemaleImage != null) {
+				FemaleImage.Dispose ();
+				FemaleImage = null;
+			}
+
 			if (InchesTextField != null) {
 				InchesTextField.Dispose ();
 				InchesTextField = null;
 			}
 
-			if (AgeTextField != null) {
-				AgeTextField.Dispose ();
-				AgeTextField = null;
+			if (MaleImage != null) {
+				MaleImage.Dispose ();
+				MaleImage = null;
+			}
+
+			if (NameTextField != null) {
+				NameTextField.Dispose ();
+				NameTextField = null;
 			}
 
 			if (WeightTextField != null) {
 				WeightTextField.Dispose ();
 				WeightTextField = null;
-			}
-
-			if (BMIResultLabel != null) {
-				BMIResultLabel.Dispose ();
-				BMIResultLabel = null;
 			}
 		}
 	}

@@ -14,7 +14,7 @@ using BMI.Android.Fragments;
 
 namespace BMI.Android.Activities
 {
-    [Activity(Label = "BMI", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "BMICalculator", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -73,7 +73,7 @@ namespace BMI.Android.Activities
 
             // Create and Show the Dialog
             ResultDialogFragment resultDialog = ResultDialogFragment.NewInstance(null);
-            resultDialog.BMIValue = 20;
+            resultDialog.BMIValue = 20.9f;
             resultDialog.Show(fragmentTrans, "BMIResultDialog");
         }
     }

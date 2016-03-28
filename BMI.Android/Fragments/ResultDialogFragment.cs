@@ -11,8 +11,8 @@ namespace BMI.Android.Fragments
 {
     public class ResultDialogFragment : V7AppCompatDialogFragment
     {
-        private int _bmiValue;
-        public int BMIValue
+        private float _bmiValue;
+        public float BMIValue
         {
             get { return _bmiValue;}
             set{ _bmiValue = value;}

@@ -89,8 +89,6 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_info.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_info.png" />
     <AndroidResource Include="Resources\layout\Temp.axml" />
-    <AndroidResource Include="Resources\drawable\male_color.png" />
-    <AndroidResource Include="Resources\drawable\male_grey.png" />
     <AndroidResource Include="Resources\layout\Activity_Settings.axml" />
     <AndroidResource Include="Resources\layout\Activity_Main.axml" />
     <AndroidResource Include="Resources\menu\main_menu.xml" />
@@ -104,6 +102,10 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_results.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_results.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_results.png" />
+    <AndroidResource Include="Resources\layout\Dialog_BMIResult.axml" />
+    <AndroidResource Include="Resources\drawable\normal.png" />
+    <AndroidResource Include="Resources\drawable\overweight.png" />
+    <AndroidResource Include="Resources\drawable\underweight.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

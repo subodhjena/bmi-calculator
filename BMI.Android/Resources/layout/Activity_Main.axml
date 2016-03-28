@@ -194,7 +194,7 @@
                         android:layout_height="1dp"
                         android:background="@color/primary" />
                     <TextView
-                        android:text="30"
+                        android:text="22.5"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

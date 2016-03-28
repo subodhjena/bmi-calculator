@@ -11,6 +11,13 @@ namespace BMI.Android.Fragments
 {
     public class ResultDialogFragment : V7AppCompatDialogFragment
     {
+        private ImageView EmotionImageView;
+        private TextView NameTextView;
+        private TextView ResultTextView;
+        private TextView Message1TextView;
+        private TextView Message2TextView;
+        private Button ActionButton;
+
         public ResultDialogFragment()
         {
         }
@@ -22,17 +29,34 @@ namespace BMI.Android.Fragments
             return dialogFragment;
         }
 
-        public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
-            View view =  inflater.Inflate(Resource.Layout.Temp, container, false);
-            Button button = view.FindViewById<Button> (Resource.Id.CloseButton);
-            button.Click += delegate {
-                Dismiss();
-                Toast.MakeText(Activity ,"Dialog fragment dismissed!" , ToastLength.Short).Show();
+            View view = inflater.Inflate(Resource.Layout.Dialog_BMIResult, container, false);
+
+            EmotionImageView = view.FindViewById<ImageView>(Resource.Id.imgEmotion);
+            NameTextView = view.FindViewById<TextView>(Resource.Id.txtName);
+            ResultTextView = view.FindViewById<TextView>(Resource.Id.txtResult);
+            Message1TextView = view.FindViewById<TextView>(Resource.Id.txtMessage1);
+            Message2TextView = view.FindViewById<TextView>(Resource.Id.txtMessage2);
+            ActionButton = view.FindViewById<Button>(Resource.Id.btnOk);
+
+            // Set Properties
+            EmotionImageView.SetImageResource(Resource.Drawable.underweight);
+            NameTextView.Text = "SUBODH,";
+            ResultTextView.Text = "22.5";
+            Message1TextView.Text = "You are perfectly Healthy";
+            Message2TextView.Text = "Enjoy your life and Stay healthy";
+            ActionButton.Click += (object sender, EventArgs e) =>
+            {
+                DismissDialog();
             };
 
             return view;
+        }
+
+        private void DismissDialog()
+        {
+            Dismiss();
         }
     }
 }

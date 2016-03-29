@@ -4,11 +4,6 @@ using UIKit;
 using Foundation;
 using CoreGraphics;
 
-using MvvmCross.iOS.Views;
-using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.ViewModels;
-
 using BMI.Core.ViewModels;
 
 namespace BMI.iOS
@@ -22,7 +17,6 @@ namespace BMI.iOS
 
         public override void ViewDidLoad ()
         {
-            //this.Request = new MvxViewModelRequest<BMIViewModel>(null, null, new MvxRequestedBy());
             base.ViewDidLoad ();
             InitializePaperElements();
 

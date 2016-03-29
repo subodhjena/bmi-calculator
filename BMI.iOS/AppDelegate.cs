@@ -1,11 +1,6 @@
 ﻿using Foundation;
 using UIKit;
 
-using MvvmCross.iOS.Platform;
-using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.Platform;
-using MvvmCross.Core.ViewModels;
-
 using BMI.Core.ViewModels;
 
 namespace BMI.iOS
@@ -13,7 +8,7 @@ namespace BMI.iOS
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
-    public class AppDelegate : MvxApplicationDelegate
+    public class AppDelegate : UIApplicationDelegate
     {
         public override UIWindow Window
         {
@@ -23,8 +18,6 @@ namespace BMI.iOS
             
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            var setup = new Setup(this, new MvxIosViewPresenter(this, Window));
-            setup.Initialize();
 
             return true;
         }

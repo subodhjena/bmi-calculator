@@ -39,7 +39,6 @@ namespace BMI.Core.Helpers
                 }
             }
         }
-
     }
 }
 

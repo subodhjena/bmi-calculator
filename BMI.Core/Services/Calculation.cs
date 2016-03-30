@@ -11,8 +11,9 @@ namespace BMI.Core.Services
 
         public float BMIValue(Person person)
         {
-            // Do some calculation with the person object
-            return (float)person.age;
+            var heightInCentimeters = person.feet * 30.48;
+
+            return (float)(person.weight / (heightInCentimeters * heightInCentimeters));
         }
     }
 }

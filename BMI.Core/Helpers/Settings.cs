@@ -3,42 +3,39 @@ using System.Collections.Generic;
 
 namespace BMI.Core.Helpers
 {
-    public sealed class Settings
+    public class Settings
     {
-        private static Settings instance = null;
-        private static readonly object padlock = new object();
-
-        IList<String> _weightUnits;
-
-        public IList<String> WeightUnits
-        {
-            get { return _weightUnits; }
-            set { _weightUnits = value; }
-        }
-
-        Settings()
-        {
-            _weightUnits = new List<string>()
-            {
-                "K.G",
-                "POUNDS",
-            };
-        }
+        private static readonly object mutex = new object();
+        private static Settings _instance = null;
 
         public static Settings Instance
         {
             get
             {
-                lock (padlock)
+                if (_instance == null)
                 {
-                    if (instance == null)
+                    lock (mutex)
                     {
-                        instance = new Settings();
+                        if (_instance == null)
+                        {
+                            _instance = new Settings();
+                        }
                     }
-                    return instance;
                 }
+                return _instance;
             }
+        }
+
+        private  Settings()
+        {
+            _weightUnits = new List<string>(){ "K.G", "POUNDS" };
+        }
+
+        private IList<String> _weightUnits;
+
+        public IList<String> WeightUnits
+        {
+            get { return _weightUnits; }
         }
     }
 }
-

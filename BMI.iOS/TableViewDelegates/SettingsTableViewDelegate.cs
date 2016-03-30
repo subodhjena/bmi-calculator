@@ -17,8 +17,8 @@ namespace BMI.iOS
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             Console.WriteLine("Row Selected At : "+ indexPath.Row);
+            tableView.DeselectRow(indexPath, true);
         }
-            
     }
 }
 
